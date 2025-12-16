@@ -1,0 +1,24 @@
+[project]
+name = "worker"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "colorama==0.4.6",
+  "dependency-injector==4.48.2",
+  "grpcio==1.76.0",
+  "loguru==0.7.3",
+  "protobuf==6.33.1",
+  "python-dotenv>=1.2.1",
+  "typing-extensions==4.15.0",
+  "win32-setctime==1.2.0",
+  # "sentencepiece==0.2.1",
+  "transformers==4.44.0"
+]
+
+[tool.uv]
+package = true
+
+[tool.setuptools.packages.find]
+where = ["src"]

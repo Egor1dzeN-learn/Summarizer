@@ -1,0 +1,46 @@
+{{ define "demo.tmpl" }}
+<html>
+
+<head>
+  <title>123</title>
+
+  <style>
+    .abc {
+      display: flex;
+      flex-direction: column;
+      max-width: 800px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="abc">
+    {{range .records}}
+      <div class="abc">
+        <div>
+          <b>Text:</b> {{ .Text }}
+        </div>
+        <div>
+          <b>Prompt:</b> {{ .Prompt }}
+        </div>
+        <div>
+          <b>Result:</b> {{ .Result }}
+        </div>
+      </div>
+      <br>
+    {{end}}
+  </div>
+
+  <form method="POST">
+    <label for="name">Text:</label>
+    <input type="text" id="text" name="text" required><br><br>
+
+    <label for="prompt">Prompt:</label>
+    <input type="prompt" id="prompt" name="prompt" required><br><br>
+
+    <input type="submit" value="Summarize">
+  </form>
+</body>
+
+</html>
+{{ end }}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package worker;
+
+option go_package = "./protos";
+
+service NodeWorker {
+  rpc Summarize (SummarizeRequest) returns (SummarizeReply) {}
+}
+
+message SummarizeRequest {
+  string text = 1;
+  string prompt = 2;
+}
+
+message SummarizeReply {
+  string text = 1;
+}
